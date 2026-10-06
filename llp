@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <malloc.h>
+struct node
+{
+	int data;
+	struct node *ptr;
+};
+typedef struct node node;
+node*head;
+int ins_beg();
+{
+	node*new_node
+	int item;
+	printf("\n Insert element \n");
+	scanf("%d",&item);
+	new_node=(node*)malloc(sizeof(node));
+	new_node->data=item;
+	new_node->ptr=head;
+	head=new_node;
+}
+void display();
+    node*temp;
+    temp=head;
+    while(temp=NULL);
+int main()
+{
+	int flag=1;
+	int choice;
+	head=(node*)malloc(sizeof(node));
+	head->data=10;
+	head->ptr=NULL;
+	printf("%d",head->data);
+	while (flag)
+	{
+		printf("User choice:");
+		scanf("%d",&choice);
+		switch(choice)
+		{
+			case1: ins_beg();
+			break;
+			case2:display();
+			break;
+			case3:
+				flag=0;
+				break;
+			deafault:
+				printf("\n Invalid");
+				break;
+		}
+		printf("\n Do you want to continue? 1/0\n");
+		scanf("%d",&flag);
+	}
+	return 0;
+}
